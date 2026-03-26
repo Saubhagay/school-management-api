@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "aa123b45-67c8-901d-234e-56789f012a34",
+		"name": "School Management API",
+		"description": "API collection for adding schools and fetching them sorted by geographical distance.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add School",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Green Valley High School\",\n    \"address\": \"123 Education Lane, City Center\",\n    \"latitude\": 28.6139,\n    \"longitude\": 77.2090\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/addSchool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"addSchool"
+					]
+				},
+				"description": "Adds a new school to the database. Requires name, address, latitude, and longitude."
+			},
+			"response": []
+		},
+		{
+			"name": "List Schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/listSchools?latitude=28.5355&longitude=77.3910",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "28.5355",
+							"description": "User's current latitude"
+						},
+						{
+							"key": "longitude",
+							"value": "77.3910",
+							"description": "User's current longitude"
+						}
+					]
+				},
+				"description": "Fetches a list of all schools sorted by distance from the user's location based on the provided latitude and longitude."
+			},
+			"response": []
+		}
+	]
+}
