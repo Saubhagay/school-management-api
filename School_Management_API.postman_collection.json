@@ -22,12 +22,13 @@
 					"raw": "{\n    \"name\": \"Green Valley High School\",\n    \"address\": \"123 Education Lane, City Center\",\n    \"latitude\": 28.6139,\n    \"longitude\": 77.2090\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8000/addSchool",
-					"protocol": "http",
+					"raw": "https://school-management-api-8i5k.onrender.com/addSchool",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"school-management-api-8i5k",
+						"onrender",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"addSchool"
 					]
@@ -42,12 +43,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/listSchools?latitude=28.5355&longitude=77.3910",
-					"protocol": "http",
+					"raw": "https://school-management-api-8i5k.onrender.com/listSchools?latitude=28.5355&longitude=77.3910",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"school-management-api-8i5k",
+						"onrender",
+						"com"
 					],
-					"port": "8000",
 					"path": [
 						"listSchools"
 					],
